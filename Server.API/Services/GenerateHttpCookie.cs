@@ -33,4 +33,9 @@ public class GenerateHttpCookie
             SameSite = SameSiteMode.None
         });
     }
+
+    public void RemoveCookie(HttpContext context)
+    {
+        context.Response.Cookies.Delete("JWT_KEY");
+    }
 }
